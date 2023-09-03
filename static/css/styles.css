@@ -1,0 +1,90 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Define a keyframes animation named "fade-in" */
+/* Define a keyframes animation named "bounce" */
+/* Define a keyframes animation named "typing" */
+/* Define a keyframes animation named "typing" */
+@keyframes typing {
+    from {
+      width: 0; /* Start with zero width (hidden text) */
+    }
+    to {
+      width: 100%; /* Expand to full width (show all text) */
+    }
+  }
+  
+  /* Apply the animation to your heading */
+  #heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    overflow: hidden; /* Hide any overflow text */
+    border-right: 2px solid transparent; /* Create a blinking cursor effect */
+    animation: typing 3s steps(40, end); /* Use the "typing" animation without infinite loop */
+  }
+  
+  
+  
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#formData {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="date"],
+input[type="text"],
+input[type="submit"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

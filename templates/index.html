@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <title>Document</title>
+    <!-- <style>
+      
+        #root{
+            display: flex;
+            position: relative;
+            justify-content: center;
+        }
+       input {
+            margin-bottom: 15px;
+          
+        }
+        
+       
+    </style> -->
+</head>
+<body>
+    <div id="root">
+        <h1 id="heading">House Price Prediction System</h1>      
+    </div>
+    <div id="formData">
+        <form action="/predict" method="post">
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date"><br>
+            <label for="bedroom">Enter no. of bedrooms:</label>
+            <input type="number" name="bedroom" id="bedroom">
+            <br>
+            <label for="bathroom">Enter no. of bathrooms:</label>
+            <input type="number" name="bathroom" id="bathroom">
+            <br>
+            <input type="submit" value="Predict House Price" id="submit">
+        </form>
+       <p>{{predictionValue}}</p> 
+    </div>
+ 
+</body>
+</html>
