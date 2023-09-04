@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/styles.css">
     <title>Document</title>
-    <!-- <style>
+      <!-- <style>
       
         #root{
             display: flex;
@@ -27,12 +27,80 @@
     <div id="formData">
         <form action="/predict" method="post">
             <label for="date">Date:</label>
-            <input type="date" name="date" id="date"><br>
+            <input type="date" name="date" id="date" required>
+            <br>
             <label for="bedroom">Enter no. of bedrooms:</label>
-            <input type="number" name="bedroom" id="bedroom">
+            <input type="number" name="bedroom" id="bedroom" required>
             <br>
             <label for="bathroom">Enter no. of bathrooms:</label>
-            <input type="number" name="bathroom" id="bathroom">
+            <input type="number" name="bathroom" id="bathroom" required>
+            <br>
+            <label for="livingArea">Enter area of house :</label>
+            <input type="number" name="livingArea" id="livingArea" required>
+            <br>
+            <label for="basement">Enter area of basement:</label>
+            <input type="number" name="basement" id="basement" required>
+            <br>
+            <label for="lotArea">Enter lot area:</label>
+            <input type="number" name="lotArea" id="lotArea" required>
+            <br>
+            <label for="floor">Enter no. of floors:</label>
+            <input type="number" name="floor" id="floor" required>
+            <br>
+            <!-- <label >Waterfront present or not?</label> -->
+            <label for="waterFront">Waterfront present or not?</label>
+            <!-- <input type="radio" name="bathroom" id="bathroom"> Yes -->
+            <select name="waterFront" id="waterFront">
+                <option value="1">Yes</option>
+                <option value="0">No</option>
+            </select>
+            <br>
+            <label for="views">Enter no. of views:</label>
+            <input type="number" name="views" id="views">
+            <br>
+            <label for="condition">Select the condition of the house :</label>
+            <select name="condition" id="condition">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <br>
+            <label for="grade">Select the grade of the house :</label>
+            <select name="grade" id="grade">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <br>
+            <label for="builtYear">Built Year:</label>
+            <input type="number" id="builtYear" name="builtYear" pattern="\d{4}" required>
+            <br>
+            <label for="renovYear">Renovation Year:</label>
+            <input type="number" id="renovYear" name="renovYear" pattern="\d{4}" required>
+            <br>
+            <label for="postalCode">Postal Code:</label>
+            <input type="number" id="postalCode" name="postalCode" pattern="\d{6}" required>
+            <br>
+            <label for="renLivingArea">Enter renovated living area:</label>
+            <input type="number" name="renLivingArea" id="renLivingArea" required>
+            <br>
+            <label for="renLotArea">Enter renovated lot area:</label>
+            <input type="number" name="renLotArea" id="renLotArea" required>
+            <br>
+            <label for="schools">Enter no. of schools nearby:</label>
+            <input type="number" name="schools" id="schools" required>
+            <br>
+            <label for="airport">Enter distance from the airport in Km:</label>
+            <input type="number" name="airport" id="airport" required>
             <br>
             <input type="submit" value="Predict House Price" id="submit">
         </form>
