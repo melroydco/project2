@@ -9,7 +9,7 @@ with open("./model/hpc.pkl",'rb') as file:
 
 @app.route('/')
 def index():
-    return render_template('index.html',predictionVal="")
+    return render_template('index.html')
 
 
 @app.route('/predict',methods=['POST'])
@@ -58,11 +58,11 @@ def predict():
 
     total_area= livingArea+basement
 
-    # prediction=model.predict([[date,bedroom,bathroom,total_area,lot,floor,waterFront,views,condtion,grade,livingArea,basement,builtYear,renovYear,postal,renlivarea,renlotArea,school,airpot]])
-    prediction=model.predict([[43467,5,1,1000,5000,2,1,1,4,7,500,500,2010,2023,574237,500,1500,5,10]])
+    prediction=model.predict([[date,bedroom,bathroom,total_area,lot,floor,waterFront,views,condtion,grade,livingArea,basement,builtYear,renovYear,postal,renlivarea,renlotArea,school,airpot]])
+    # prediction=model.predict([[43467,5,1,1000,5000,2,1,1,4,7,500,500,2010,2023,574237,500,1500,5,10]])
     predictionVal = "The price of house is $ " + str(prediction[0])
 
-    return render_template('index.html',predictionValue=predictionVal)
+    return render_template('result.html',predictionValue=predictionVal)
 
 if __name__ == '__main__':
     app.run(debug=True)
